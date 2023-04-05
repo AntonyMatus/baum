@@ -1297,6 +1297,8 @@
 @media (min-width: 1199px) {
     /* page container */
     .container, .container-lg, .container-md, .container-sm, .container-xl { max-width: 100%; }
+    
+    
 }
 
 @media (max-width: 1199px) {
@@ -1310,7 +1312,23 @@
     .parallax { background-attachment: inherit !important; background-position: center !important; }
     .lg-last-order { order: 10; }
     .html-video { height: 100%; }
-
+    .ch_container,
+    .contact_container {
+        grid-template-columns: auto;
+        grid-gap: 60px;
+    }
+    .ch_items .ch_item {
+        padding: 40px 20px;
+    }
+    .contact_form {
+        padding: 40px 20px;
+    }
+    .contact_form .cf_content {
+        gap: 20px;
+    }
+    .contact_form .cf_group {
+        grid-gap: 20px;
+    }
     /* typography */
     h1, h2, h3, h4, h5, h6 { margin:0 0 15px; }
 
@@ -2860,6 +2878,9 @@
     .logo-order { order: 5}
     .navbar-collapse-show .sticky .header-reverse-scroll { -webkit-transform: translateY(0); -moz-transform: translateY(0); -ms-transform: translateY(0); -o-transform: translateY(0); transform: translateY(0); -webkit-transition-duration: 0.3s;}
 
+    .contact_hero {
+        margin-top: 80px;
+    }
     /* top bar */
     .top-bar-contact .top-bar-contact-list:last-child {border-right: none; padding-right: 0}
 
@@ -4751,6 +4772,9 @@
     /* architecture */
     .home-architecture .tparrows.tp-leftarrow { transform: matrix(1, 0, 0, 1, -67, -234) !important; }
     .home-architecture .tparrows.tp-rightarrow { transform: matrix(1, 0, 0, 1, -67, -301) !important; }
+    .contact_form .cf_group {
+        grid-template-columns: auto;
+    }
 }
 
 @media (max-width: 767px) {
@@ -7988,6 +8012,10 @@
 
     /* countdown style 02 */
     .countdown.countdown-style-02 .countdown-box { margin-bottom: 15px; padding: 0 25px; }
+    .contact_info .section_header .section_heading{ font-size: 30px;}
+    .cta_container{display: grid;}
+    .padding-responsive{padding-right: 10px; padding-left: 10px;}
+    
 }
 @media (max-height: 460px) {
     /* header search */
