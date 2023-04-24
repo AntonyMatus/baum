@@ -1052,6 +1052,54 @@
         }
     });
 
+    // $("#contactform").on("submit", function(e) {
+    //     var name = $("#name").val();
+    //     var email = $("#email").val();
+    //     var phone = $("#phone").val();
+    //     var commpany = $("#company-name").val();
+    //     var comment = $("#comment").val();
+
+    //     console.log($(this).serialize());
+      
+    //     if (name === "") {
+    //       $("#name").addClass("error-color");
+    //     }
+    //     if (email === "") {
+    //       $("#email").addClass("error-color");
+    //     }
+    //     if (phone === "") {
+    //       $("#phone").addClass("error-color");
+    //     }
+    //     if (commpany === "") {
+    //       $("#company-name").addClass("error-color");
+    //     }
+    //     if (comment === "") {
+    //       $("#comment").addClass("error-color");
+    //     }
+      
+    //     else {
+    //       $.ajax({
+    //         url:"email-templates/contact-form.php",
+    //         data:$(this).serialize(),
+    //         type:"POST",
+    //         success:function(data){
+    //           $("#success").addClass("show-result"); //=== Show Success Message==
+    //           $("#contactform").each(function(){
+    //             this.reset();
+    //           });
+    //         },
+    //         error:function(data){
+    //           $("#error").addClass("show-result"); //===Show Error Message====
+    //         }
+    //       });
+    //       var forms = $("#contactform input, #contactform textarea");
+    //       forms.removeClass("error-color");
+    //     }
+      
+    //     e.preventDefault();
+    //     e.target.reset();
+    //   });
+
     /****** Validate terms and conditions in form ******/
     $( document ).on( 'click', '.terms-condition', function() {
         var termsObj =  $( this );
