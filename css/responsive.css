@@ -8013,8 +8013,14 @@
     /* countdown style 02 */
     .countdown.countdown-style-02 .countdown-box { margin-bottom: 15px; padding: 0 25px; }
     .contact_info .section_header .section_heading{ font-size: 30px;}
-    .cta_container{display: grid;}
+    .cta_container{text-align: left; display: grid; place-items: center;}
     .padding-responsive{padding-right: 10px; padding-left: 10px;}
+    .overflow-auto2{overflow: auto; display: flex; flex-wrap: nowrap;}
+    .responsive-about{margin-top: 5rem; margin-bottom: 5rem;}
+    .funcionalidad{font-size: 32px;}
+    .fs-16px{font-size: 14px;}
+    .descargar{line-height: 6.5rem;}
+    .salto-br{display: block;}
     
 }
 @media (max-height: 460px) {

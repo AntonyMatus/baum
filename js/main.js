@@ -1052,54 +1052,45 @@
         }
     });
 
-    // $("#contactform").on("submit", function(e) {
-    //     var name = $("#name").val();
-    //     var email = $("#email").val();
-    //     var phone = $("#phone").val();
-    //     var commpany = $("#company-name").val();
-    //     var comment = $("#comment").val();
+    // form-contact
+    var formulario = document.querySelector('#formulario');
 
-    //     console.log($(this).serialize());
-      
-    //     if (name === "") {
-    //       $("#name").addClass("error-color");
-    //     }
-    //     if (email === "") {
-    //       $("#email").addClass("error-color");
-    //     }
-    //     if (phone === "") {
-    //       $("#phone").addClass("error-color");
-    //     }
-    //     if (commpany === "") {
-    //       $("#company-name").addClass("error-color");
-    //     }
-    //     if (comment === "") {
-    //       $("#comment").addClass("error-color");
-    //     }
-      
-    //     else {
-    //       $.ajax({
-    //         url:"email-templates/contact-form.php",
-    //         data:$(this).serialize(),
-    //         type:"POST",
-    //         success:function(data){
-    //           $("#success").addClass("show-result"); //=== Show Success Message==
-    //           $("#contactform").each(function(){
-    //             this.reset();
-    //           });
-    //         },
-    //         error:function(data){
-    //           $("#error").addClass("show-result"); //===Show Error Message====
-    //         }
-    //       });
-    //       var forms = $("#contactform input, #contactform textarea");
-    //       forms.removeClass("error-color");
-    //     }
-      
-    //     e.preventDefault();
-    //     e.target.reset();
-    //   });
+    formulario.addEventListener('submit', function(e){
+        e.preventDefault();
+        email();
+    });
 
+    function email() {
+        let datos = new FormData(formulario);
+        fetch(`../email-templates/contact-form.php`, {
+            method: 'POST',
+            body: datos
+        }).then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data === 'exito'){
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Exito",
+                    text: "El mensaje ha sido enviado con exito!",
+                    showConfirmButton: false,
+                    timer: 3500
+                });
+                formulario.reset();
+            } else { 
+                Swal.fire({
+                    position: "center",
+                    icon: "error",
+                    title: "Oops",
+                    text: "Error al enviar el mensaje",
+                    showConfirmButton: false,
+                    timer: 3500
+                });
+            }
+        })
+    }
+    
     /****** Validate terms and conditions in form ******/
     $( document ).on( 'click', '.terms-condition', function() {
         var termsObj =  $( this );

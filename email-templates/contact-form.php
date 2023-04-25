@@ -7,7 +7,7 @@ if( ! empty( $_POST['email'] ) ) {
 	$enable_smtp = 'no'; // yes OR no
 
 	// Email Receiver Address
-	$receiver_email = 'tony_rebo@hotmail.com';
+	$receiver_email = 'info@baum.mx';
 
 	// Email Receiver Name for SMTP Email
 	$receiver_name 	= 'Baum';
@@ -19,10 +19,10 @@ if( ! empty( $_POST['email'] ) ) {
 	$grecaptchav3_secret_key = '';
 
 	$from 	= $_POST['email'];
-	$name 	= isset( $_POST['name'] ) ? $_POST['name'] : '';
-	$phone 	= isset( $_POST['phone'] ) ? $_POST['phone'] : '';
-	$company = isset( $_POST['company-name']) ? $_POST['company-name'] : '';
-	$comment= isset( $_POST['comment'] ) ? $_POST['comment'] : '';
+	$name 	= $_POST['name'];
+	$phone 	= $_POST['phone'] ;
+	$company = $_POST['company-name'];
+	$comment= $_POST['comment'];
 	
 	if( ! empty( $grecaptchav3_secret_key ) && ! empty( $_POST['g-recaptcha-response'] ) ) {
 
@@ -99,12 +99,13 @@ if( ! empty( $_POST['email'] ) ) {
 		$headers .= 'From: ' . $name . ' <' . $from . '>' . "\r\n";
 		if( mail( $receiver_email, $subject, $message, $headers ) ) {
 
-			header( "Location: http://baum.test/");	
-			echo '{ "alert": "alert-success", "message": "Tu mensaje ha sido enviado exitosamente!" }';
+			header('Content-Type: application/json');
+			echo json_encode('exito');
 			
 		} else {
 			//Fail Message
-			echo '{ "alert": "alert-danger", "message": "No se pudo enviar su mensaje por favor verifique sus datos!" }';
+			header('Content-Type: application/json');
+			echo json_encode('error');
 		}
 		
 	} else { // SMTP
