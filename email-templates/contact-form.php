@@ -8,6 +8,7 @@ if( ! empty( $_POST['email'] ) ) {
 
 	// Email Receiver Address
 	$receiver_email = 'info@baum.mx';
+	
 
 	// Email Receiver Name for SMTP Email
 	$receiver_name 	= 'Baum';

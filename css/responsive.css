@@ -6,8 +6,27 @@
  * Copyright (c) 2021 themezaa.com
  */
 
+ @media (max-width: 4400px) and (min-width:1900px) {
+    .col-lg-2 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+    .one-third-screen {
+        height: 100vh;
+    }
+    .blog-post-image img, .portfolio-image img{height: 50vh;}
+}
+
 @media (min-width: 1901px) {
     .litho-parallax-bg { width: 45%; }
+    .col-lg-2 {
+        flex: 0 0 auto;
+        width: 16.66666667%;
+    }
 }
 
 @media (max-width: 1600px) {
@@ -4701,6 +4720,35 @@
     
     /* consulting */
     .home-dentist .popup-youtube.absolute-middle-center { left: 50%; }
+    .overflow-auto2 {
+        overflow: auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .funcionalidad {
+        font-size: 32px;
+        line-height: 3rem;
+        margin-top:1.5rem;
+
+    }
+    .fs-16px {
+        font-size: 12px;
+    }
+    .btn.btn-fancy.btn-small{margin-bottom: 1.5rem;}
+    .col-5 {
+        flex: 0 0 auto;
+        width: 80.666667%;
+    }
+    .navbar-brand {
+        margin-right: 0;
+        font-size: 0;
+        display: inline-grid;
+        width: 70%;
+        height: auto;
+        justify-items: end;
+        margin-bottom: 15px;
+    }
+
 }
 
 @media only screen and (max-width: 991px) and (orientation: landscape) {
@@ -4762,6 +4810,8 @@
 @media only screen and (max-width: 991px) and (min-width: 767px) and (orientation: landscape) {
     .home-hotel-resort .rev_slider_wrapper { min-height: 450px !important; }
     .home-startup .rev_slider_wrapper { min-height: 450px; }
+    .container{max-width: 100%;}
+    
 }
 
 @media (max-width: 778px) {
@@ -6061,7 +6111,7 @@
     /* screen height */
     .one-fifth-screen { height:600px; }
     .one-fourth-screen { height:500px; }
-    .one-third-screen { height:350px; }
+    .one-third-screen { height:100vh; }
     .one-second-screen { height:300px; }
     .extra-small-screen { height:250px; }
 
@@ -6399,6 +6449,7 @@
     
     /* horizontal portfolio slider */
     .horizontal-portfolio-slider-main .horizontal-portfolio-slider .swiper-slide { height: auto;}
+    
 }
 
 @media screen and (max-width: 575px) {
@@ -8021,6 +8072,22 @@
     .fs-16px{font-size: 14px;}
     .descargar{line-height: 6.5rem;}
     .salto-br{display: block;}
+    header [class^="container-"] [class^="col-"], header [class^="container-"] [class*=" col-"] {padding-left: 30px;}
+    .navbar-brand {
+        margin-right: 0;
+        font-size: 0;
+        display: inline-grid;
+        width: 200px;
+        height: auto;
+        justify-items: end;
+        margin-bottom: 15px;
+    }
+    .client-box .clients{width: auto;}
+    .col-5 {
+        flex: 0 0 auto;
+        width: 46.666667%;
+    }
+    header .navbar .navbar-brand img, header.side-menu .logo img, header .sidebar-nav-menu .navbar-brand img{max-height: 50px;}
     
 }
 @media (max-height: 460px) {
