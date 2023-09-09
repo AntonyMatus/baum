@@ -23,10 +23,8 @@
 
 @media (min-width: 1901px) {
     .litho-parallax-bg { width: 45%; }
-    .col-lg-2 {
-        flex: 0 0 auto;
-        width: 16.66666667%;
-    }
+    
+    
 }
 
 @media (max-width: 1600px) {
@@ -1297,6 +1295,7 @@
 
     /* landing page */
     .litho-parallax-bg { width: 800px; }
+    
 }
 
 @media (max-width: 1500px) {
@@ -1306,11 +1305,16 @@
 
     /* fashion shop */
     .home-fashion-shop .tp-tabs { left: 54% !important; }
+    .col-lg-2{flex:0 0 auto;width:16.66666667%}
+    .col-lg-8{flex:0 0 auto;width:66.66666667%}
 }
 
 @media (max-width: 1300px) {
     /* fashion shop */
     .home-fashion-shop .tp-tabs { left: 60% !important; }
+    .col-lg-2{flex:0 0 auto;width:16.66666667%}
+    .col-lg-8{flex:0 0 auto;width:66.66666667%}
+
 }
 
 @media (min-width: 1199px) {
@@ -4748,6 +4752,12 @@
         justify-items: end;
         margin-bottom: 15px;
     }
+    .one-third-screen {
+        height: 100vh;
+    }
+    .arrow-left, .arrow-right{display: initial;}
+    .p-0-response{padding-left: 10px; padding-right: 10px;}
+    .client-responsive{display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap;}
 
 }
 
@@ -8088,7 +8098,13 @@
         width: 46.666667%;
     }
     header .navbar .navbar-brand img, header.side-menu .logo img, header .sidebar-nav-menu .navbar-brand img{max-height: 50px;}
-    
+    .one-third-screen {
+        height: 100vh;
+        /* !ozK&6}SLxU$ */
+    }
+    .arrow-left, .arrow-right{display: initial;}
+    .p-0-response{padding-left: 10px; padding-right: 10px;}
+    .client-responsive{display: flex; flex-direction: row; align-items: center; flex-wrap: nowrap;}
 }
 @media (max-height: 460px) {
     /* header search */
